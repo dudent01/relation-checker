@@ -13,7 +13,7 @@ setup(
     long_description= README,
     long_description_content_type= "text/markdown",
     author= "Denis Rozhnov",
-    author_email= "denis DOT a DOT rozhnov AT gmail DOT com",
+    author_email= "denis.a.rozhnov@gmail.com",
     license= "",        # GNU GPLv3 or BSD
     classifiers=[
         "Programming Language :: Python",
