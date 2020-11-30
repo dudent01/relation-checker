@@ -103,4 +103,4 @@ The second linking of `Person` occurs on line 136 >> `declare(Student, Person)`,
 
 ### **set_end**
 
-The call `set_end()` should be placed at the top of the user's source code, inside of the `if __name__ == '__main__'` block, below the `import` statements. This function ensures that all of the errors reported by relation_checker will be printed after all of the output of the source code is printed. This is essentially another filter for separating the two types of output of a program that uses the relation_checker library.
+The call `set_end()` should be placed at the top of the user's source code, inside of the `if __name__ == '__main__'` block, below the `import` statements. This function ensures that all of the errors reported by relation-checker will be printed after all of the output of the source code is printed. This is essentially another filter for separating the two types of output of a program that uses the relation-checker library.
