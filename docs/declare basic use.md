@@ -79,7 +79,7 @@ Next we relinked the `Person` class to the `Student` class from the ontology, an
 Finally we call the `add_student` method, which places `t` into the `teaches` list of `s` (which does not violate Python rules, so it does not crash the program), and displays an error message to the user from the relation-checker library (because here the domain was a `Student` and the range was a `Teacher`). We have attached semantic meaning to the user's code, and in this way we captured a logical error in the script file.
 
 #### **Notes:**
-1. When we relinked the `Person` class, relation-checker issued a `Warning: Declaration at line 136 in file C:/Users/Denis/Personal_Projects/Program Ontology Markup/v1/Sample_code .py :
+1. When we relinked the `Person` class, relation-checker issued a `Warning: Declaration at line 136 in file PATH_TO_YOUR_FILE :
 	  Person has already been declared. The old value is now overwritten.`
 2. `t` and `s` could have been declared as two different classes in the script file. The error would be caught regardless, as long as `s` was not linked to a `Teacher` object or `t` was not linked to a `Student` object.
 3. The relation-checker error would have been properly thrown as long as `declare(teaches, Person.add_student)` was placed anywhere after the definition of the `Person` class and before `add_student` was called. This statement would impact (i.e. test consistency with the ontology) every execution of `add_student` that followed it.
