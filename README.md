@@ -1,6 +1,6 @@
 ## relation-checker
 
-relation-checker is a library for semantic dynamic code analysis in Python 3. It allows the user to create an ontology specifying a set of semantic relationships and to link the ontology to objects in the user's source code, catching logical errors that could otherwise be unnoticed.
+relation-checker is a framework for semantic dynamic code analysis in Python 3. It allows the user to create an ontology specifying a set of semantic relationships and to link the ontology to objects in the user's source code, catching logical errors that could otherwise be unnoticed.
 
 relation-checker uses the owlready2 library to build an ontology and to run a reasoner on it. Here we create a simple ontology.:
 
@@ -38,9 +38,9 @@ with school:
 ```
 
 #### **Notes:**
-1. This file must be called Ontologies .py and it **must be placed in the relation-checker folder of the library**.
+1. This file must be called Ontologies .py and it **must be placed in the relation-checker folder of the framework**.
 2. None of the ontology object class names end in digits (0-9)
-3. Java has to be installed in your system for use of this library.
+3. Java has to be installed in your system for use of this framework.
 
 We can now write a simple script in another file and link it to the ontology:
 
@@ -147,14 +147,14 @@ relation-checker declarations can also be applied to functions imported into the
 
 relation-checker also provides additional functions for the user. `enable_print` and `disable_print` allow the user to isolate the output of the ontology errors from the output of the code. `print_display_lines` displays the lines at which declarations are made at the end of the program's execution, and `print_overwrites` does the same for declarations that are overwritten in the code. `entry_line` returns and optionally prints the number of the line at which a specific declaration is made. `set_end` ensures that ontology errors are displayed only after they are all found at the very end of the program. **Check the docs for proper usage of all of these additional functions.**
 
-**It is possible that the library throws the following error when you first use it:**
+**It is possible that the code throws the following error when you first use it:**
 ```
 sync_reasoner: Could not reserve enough space for SOME_INTEGER KB object heap
 ```
 
 This means that there is not enough memory on your JVM. You should then go to the owlready2 reasoner .py file and decrease `JAVA_MEMORY`. For example, you can decrease it from the default 1000 to 500.
 
-relation-checker is a multiprocessed library. It executes the testing of each call to a declared function in a separate process. However, performance will not decline with an increased number of calls to declared functions, because the processes are managed to run with minimal interference.
+relation-checker is a multiprocessed framework. It executes the testing of each call to a declared function in a separate process. However, performance will not decline with an increased number of calls to declared functions, because the processes are managed to run with minimal interference.
 
 The execution is further optimized by caching argument-relation-argument triples, thus displaying errors for methods without recomputing them. Recursive function calls are identified and reported only once to avoid redundancy.
 
