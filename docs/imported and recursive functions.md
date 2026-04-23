@@ -2,7 +2,7 @@
 
 ### **Imported functions**
 
-The relation-checker library can not only handle functions from the user's script file, but also from files that are imported into the main script file.<br/> Suppose that we create a python file called Importable .py:
+The relation-checker framework can not only handle functions from the user's script file, but also from files that are imported into the main script file.<br/> Suppose that we create a python file called Importable .py:
 
 ```
 from relation-checker import *
