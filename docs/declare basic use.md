@@ -34,7 +34,7 @@ with school:
         range = [Teacher]
 ```
 
-Suppose that we create the following script file in which we will use the relation-checker library:
+Suppose that we create the following script file in which we will use the relation-checker framework:
 
 ```
 if __name__ == '__main__':
@@ -76,7 +76,7 @@ An inconsistency will be detected if the `domain` and `range` properties of the 
 We have now created a `Person` object `t`, which is automatically linked it to an ontology `Teacher` object (because of the first declaration).<br/>
 Next we relinked the `Person` class to the `Student` class from the ontology, and we created a `Person` object `s`, which is now automatically linked to an ontology `Student` object.
 
-Finally we call the `add_student` method, which places `t` into the `teaches` list of `s` (which does not violate Python rules, so it does not crash the program), and displays an error message to the user from the relation-checker library (because here the domain was a `Student` and the range was a `Teacher`). We have attached semantic meaning to the user's code, and in this way we captured a logical error in the script file.
+Finally we call the `add_student` method, which places `t` into the `teaches` list of `s` (which does not violate Python rules, so it does not crash the program), and displays an error message to the user from the relation-checker code (because here the domain was a `Student` and the range was a `Teacher`). We have attached semantic meaning to the user's code, and in this way we captured a logical error in the script file.
 
 #### **Notes:**
 1. When we relinked the `Person` class, relation-checker issued a `Warning: Declaration at line 136 in file PATH_TO_YOUR_FILE :
@@ -109,7 +109,7 @@ This code will not throw an error. Although `cc` is linked to a `ClassClown` ont
 
 ### **Multiple declarations per function**
 
-Certain methods and functions may have more than two arguments, with a set relations that the user may wish to impose on different pairs of arguments. The relation-checker library allows users to link a method or a function to multiple ontology relations. Suppose that we add the following code to the script file:
+Certain methods and functions may have more than two arguments, with a set relations that the user may wish to impose on different pairs of arguments. The relation-checker framework allows users to link a method or a function to multiple ontology relations. Suppose that we add the following code to the script file:
 
 ```
     def multiarg(a, b, c):
