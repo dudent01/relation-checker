@@ -1,10 +1,10 @@
 ## Additional functions
 
-The relation-checker library provides the user with the following additional functions.
+The relation-checker framework provides the user with the following additional functions.
 
 ### **disable_print** and **enable_print**
 
-Calling `disable_print` prevents python from printing any output to the console except for the output provided by the relation-checker library.<br/>
+Calling `disable_print` prevents python from printing any output to the console except for the output provided by the relation-checker code.<br/>
 Calling `enable_print` reverses that effect, allowing python to print output to the console again. Here is an example of filtering output with the help of these two functions:
 
 ```
@@ -26,7 +26,7 @@ Is not allowed in your ontology.
 ```
 
 #### **Notes:**
-1. The error thrown by the library with respect to `s.add_student(t)` is printed after `OUT`, because the identification of the error occurs inside a process different from that in which the user's program itself performs the printing computation.
+1. The error thrown by the code with respect to `s.add_student(t)` is printed after `OUT`, because the identification of the error occurs inside a process different from that in which the user's program itself performs the printing computation.
 
 
 ### **entry_line**
@@ -103,4 +103,4 @@ The second linking of `Person` occurs on line 136 >> `declare(Student, Person)`,
 
 ### **set_end**
 
-The call `set_end()` should be placed at the top of the user's source code, inside of the `if __name__ == '__main__'` block, below the `import` statements. This function ensures that all of the errors reported by relation-checker will be printed after all of the output of the source code is printed. This is essentially another filter for separating the two types of output of a program that uses the relation-checker library.
+The call `set_end()` should be placed at the top of the user's source code, inside of the `if __name__ == '__main__'` block, below the `import` statements. This function ensures that all of the errors reported by relation-checker will be printed after all of the output of the source code is printed. This is essentially another filter for separating the two types of output of a program that uses the relation-checker framework.
