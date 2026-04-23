@@ -124,7 +124,7 @@ Is not allowed in your ontology.
 
 ### **fail_quit**
 
-The `fail_quit` argument is set to a default value of `False`. Keeping `fail_quit` equal to `False` ensures that the program does not terminate if relation-checker identifies an error in consistency with the ontology. This means that when an error message is displayed by the library, the user's code that uses the library will continue to run, concurrent tests are not aborted and further calls to `declare` start other tests. Consider the following code in Sample_code .py:
+The `fail_quit` argument is set to a default value of `False`. Keeping `fail_quit` equal to `False` ensures that the program does not terminate if relation-checker identifies an error in consistency with the ontology. This means that when an error message is displayed by the code, the user's code that uses the framework will continue to run, concurrent tests are not aborted and further calls to `declare` start other tests. Consider the following code in Sample_code .py:
 
 ```
     declare(teaches, x, fail_quit= True)
